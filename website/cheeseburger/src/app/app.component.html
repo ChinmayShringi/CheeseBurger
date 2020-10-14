@@ -1,26 +1,49 @@
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+  <div class="navbar">
+    <a class="navbar-brand" href="home">
+      <img src="../assets/icon.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+      CheeseBurger
+    </a>
+  </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <!-- <li class="nav-item active">
           <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a class="nav-link" href="userProf">User</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="vprod">Product</a>
         </li> 
-        <a href="cprod" class="card-link">Create</a>
-        <a href="uprod" class="card-link">Update</a>
+        <li class="nav-item">
+          <a class="nav-link" href="cprod">create</a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link" href="uprod">update</a>
+    </li> 
+    <li class="nav-item">
+      <a class="nav-link" href="reg">pic</a>
+  </li> 
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <a href="login" class="card-link">login</a>
+        
+        <div *ngIf="auth.user$ | async; then authenticated else guest">
+        </div>
+        <ng-template #guest>
+          <a href="login" class="card-link" style="color: white;">Account</a>
+        </ng-template>
+        <ng-template #authenticated>
+        <div *ngIf="auth.user$ | async as user">
+            <a href="login" class="card-link" style="color: white;">{{ user.displayName }}</a>
+        </div>
+        </ng-template>
       </form>
     </div>
   </nav>

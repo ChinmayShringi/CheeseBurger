@@ -13,8 +13,9 @@ export class FirebaseService {
     return this.db.collection('product').add({
       name: value.name,
       nameToSearch: value.name.toLowerCase(),
-      surname: value.surname,
-      age: parseInt(value.age),
+      quantity: parseInt(value.quantity),
+      price: parseInt(value.price),
+      uid: value.uid
     });
   }
 

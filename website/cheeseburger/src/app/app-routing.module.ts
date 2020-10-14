@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'home',component: HomeComponent },
   { path: 'userProf', component: UserprofileComponent,  canActivate: [AuthGuard] },
   { path: 'login',component: LoginComponent },
-  { path: 'reg',component: ProdPicComponent },
+  { path: 'reg/:id',component: ProdPicComponent },
   { path: 'vprod',component: ViewComponent },
   { path: 'cprod',component: CreateComponent },
   { path: 'uprod',component: EditComponent },

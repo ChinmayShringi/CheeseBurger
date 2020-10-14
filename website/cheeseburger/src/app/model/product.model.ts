@@ -5,3 +5,9 @@ export interface Item {
   surname: string;
   age: number;
 }
+
+export interface ImageD {
+  pid: string;
+  file: File;
+}
+

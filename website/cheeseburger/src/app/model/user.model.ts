@@ -5,3 +5,9 @@ export interface User {
   displayName?: string;
   myCustomData?: string;
 }
+export interface Product {
+  uid: string;
+  pid: string;
+  price: number;
+  quantity: number;
+}
