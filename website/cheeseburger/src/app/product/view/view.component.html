@@ -1,12 +1,10 @@
 <div class="my-2 mx-5 text-center">
 <nav class="navbar navbar-light bg-light">
-	<form class="form-inline" >
 	  <input [(ngModel)]="searchItem" class="form-control mr-sm-2" type="search" placeholder="What would you like to eat today?" aria-label="Search" (change)="search($event)">
-	</form>
   </nav>
 </div>
 <div class="list-group users-list">
-	<div *ngIf="items.lenght==0">
+	<div *ngIf="!items">
 		no data
 	</div>
 		<div class="album py-5">

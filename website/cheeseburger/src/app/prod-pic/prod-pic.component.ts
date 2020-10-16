@@ -11,7 +11,6 @@ export class ProdPicComponent {
   pid:string;
   constructor(private route: ActivatedRoute) {
     this.pid=this.route.snapshot.paramMap.get('id');
-    // console.log(this.route.snapshot.paramMap.get('id'));
    }
 
   ngOnInit(): void {

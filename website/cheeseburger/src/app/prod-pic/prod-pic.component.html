@@ -1,3 +1,6 @@
+<div class="album py-5">
+  <div class="row mx-5">
+    <div class="col-md-12">
 <div class="dropzone" 
      dropzone
      (hovered)="toggleHover($event)"
@@ -16,4 +19,7 @@
 
 <div *ngFor="let file of files">
   <upload-task [object]="{file:file,pid:pid}"></upload-task>
+</div>
+</div>
+</div>
 </div>

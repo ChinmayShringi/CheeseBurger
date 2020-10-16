@@ -19,6 +19,12 @@ import { EditComponent } from './product/edit/edit.component';
 import { CreateComponent } from './product/create/create.component';
 import { ViewComponent } from './product/view/view.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ProdPageComponent } from './prod-page/prod-page.component';
+import { ProductService } from './service/product.service';
+import { FirebaseService } from './service/firebase.service';
+import { CartComponent } from './cart/cart.component';
+import { ChatComponent } from './chat/chat.component';
+import { NotificationComponent } from './notification/notification.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +38,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     EditComponent,
     CreateComponent,
     ViewComponent,
+    ProdPageComponent,
+    CartComponent,
+    ChatComponent,
+    NotificationComponent,
   ],
   imports: [
     AngularFireModule,
@@ -47,6 +57,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   ],
   providers: [
     AuthService,
+    ProductService,
+    FirebaseService
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

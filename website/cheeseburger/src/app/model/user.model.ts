@@ -11,3 +11,9 @@ export interface Product {
   price: number;
   quantity: number;
 }
+
+export interface ProductNotifi {
+  bid: string;
+  sid: string;
+  pid:string;
+}

@@ -5,7 +5,7 @@ import { auth } from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Observable, of } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { first, switchMap } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -49,6 +49,10 @@ export class AuthService {
     
         return userRef.set(data, { merge: true })
     
+      }
+
+      getUser() {
+        return this.user$.pipe(first()).toPromise();
       }
     
       async signOut() {

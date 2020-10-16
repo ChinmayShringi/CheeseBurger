@@ -11,3 +11,9 @@ export interface ImageD {
   file: File;
 }
 
+export interface ProductDetail {
+  uid: string;
+  name: string;
+  price: number;
+  quantity: number;
+}

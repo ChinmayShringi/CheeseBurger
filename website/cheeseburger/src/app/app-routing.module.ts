@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './auth.guard';
+import { CartComponent } from './cart/cart.component';
+import { ChatComponent } from './chat/chat.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { NotificationComponent } from './notification/notification.component';
+import { ProdPageComponent } from './prod-page/prod-page.component';
 import { ProdPicComponent } from './prod-pic/prod-pic.component';
 import { CreateComponent } from './product/create/create.component';
 import { EditComponent } from './product/edit/edit.component';
@@ -19,6 +23,10 @@ const routes: Routes = [
   { path: 'vprod',component: ViewComponent },
   { path: 'cprod',component: CreateComponent },
   { path: 'uprod',component: EditComponent },
+  { path: 'cart',component: CartComponent },
+  { path: 'chat',component: ChatComponent },
+  { path: 'notifi',component: NotificationComponent },
+  { path: 'prodProf',component: ProdPageComponent },
 ];
 
 @NgModule({
