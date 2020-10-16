@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "808104944651",
+    "firebase_url": "https://cheeseburger-28f79.firebaseio.com",
+    "project_id": "cheeseburger-28f79",
+    "storage_bucket": "cheeseburger-28f79.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:808104944651:android:63c6ae08b92e0384ac930e",
+        "android_client_info": {
+          "package_name": "com.cheeseburger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "808104944651-e58cub7ug8976r01qb9ovl016c1nja6e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcDxtWLqalOhhWaZ-nElxAJX58YCAQz1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "808104944651-e58cub7ug8976r01qb9ovl016c1nja6e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
