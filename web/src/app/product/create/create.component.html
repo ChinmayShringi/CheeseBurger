@@ -1,0 +1,66 @@
+<div class="album py-5">
+  <div class="row mx-5">
+    <div class="col-md-12 mx-auto">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <form
+            class="create-form"
+            [formGroup]="options"
+            novalidate
+            (ngSubmit)="onSubmit(options.value)"
+          >
+            <div class="form-group">
+              <mat-form-field class="input-style">
+                <input
+                  matInput
+                  placeholder="Name"
+                  class="form-control"
+                  formControlName="name"
+                />
+              </mat-form-field>
+            </div>
+            <div class="form-group">
+              <mat-form-field class="input-style">
+                <input
+                  matInput
+                  type="number"
+                  min="0"
+                  max="100"
+                  placeholder="Quantity"
+                  class="form-control"
+                  formControlName="quantity"
+                />
+              </mat-form-field>
+            </div>
+            <div class="form-group">
+              <mat-form-field class="input-style">
+                <input
+                  matInput
+                  type="number"
+                  min="0"
+                  max="100"
+                  placeholder="Price"
+                  class="form-control"
+                  formControlName="price"
+                />
+              </mat-form-field>
+            </div>
+            <div class="row submit-button-container">
+              <div class="col-md-4">
+                <button
+                  mat-raised-button
+                  class="submit-button btn btn-primary"
+                  color="primary"
+                  type="submit"
+                  [disabled]="!options.valid"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

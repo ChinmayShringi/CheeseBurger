@@ -1,0 +1,58 @@
+<main role="main">
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1>We are all about food!</h1>
+      <p class="lead text-muted">
+        We are a non-profit company working towards a world where noone sleeps
+        hungry.
+      </p>
+      <p></p>
+      <div class="row justify-content-around">
+        <div class="col-4">
+          <a href="#" class="btn btn-primary my-2">Donate Something</a>
+        </div>
+        <div class="col-4">
+          <a routerLink="/vprod" class="btn btn-secondary my-2">Buy Something</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <div class="row">
+      <div class="col" *ngFor="let item of items">
+        <div class="card mb-4 shadow-sm">
+          <img
+            style="object-fit: cover"
+            src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+            height="225"
+            alt=""
+          />
+          <div class="card-body">
+            <p class="card-text">
+              {{ item.payload.doc.data().name }}
+            </p>
+            <p class="card-text">
+              Rs.{{ item.payload.doc.data().price }}.00
+            </p>
+            <p class="card-text">
+              Only {{ item.payload.doc.data().quantity }} Left!
+            </p>
+              <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button
+                  type="button"
+                  (click)="bn.buyNow(item.payload.doc.data())"
+                  class="btn btn-sm btn-outline-secondary"
+                >
+                  Buy now
+                </button>
+              </div>
+              <small class="text-muted">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</main>

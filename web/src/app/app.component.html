@@ -13,14 +13,14 @@
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <!-- <li class="nav-item active">
+        <li class="nav-item " routerLink='home' routerLinkActive="active">
           <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-        </li> -->
+        </li>
         <!-- <li class="nav-item">
           <a class="nav-link" href="userProf">User</a>
         </li> -->
-        <li class="nav-item">
-            <a class="nav-link" href="vprod">Product</a>
+        <li class="nav-item" routerLink='vprod' routerLinkActive="active">
+            <a class="nav-link">Buy</a>
         </li> 
         <!-- <li class="nav-item">
           <a class="nav-link" href="cprod">create</a>
@@ -40,9 +40,8 @@
         </ng-template>
         <ng-template #authenticated>
         <div *ngIf="auth.user$ | async as user">
-          <a href="notifi" class="card-link" style="color: white;">notifictions</a>
-          <a href="chat" class="card-link" style="color: white;">chat</a>
-          <a href="cart" class="card-link" style="color: white;">cart</a>
+          <a href="notifi" class="card-link" style="color: white;">Notification</a>
+          <a href="cart" class="card-link" style="color: white;">Cart</a>
             <a href="login" class="card-link" style="color: white;">{{ user.displayName }}</a>
         </div>
         </ng-template>
