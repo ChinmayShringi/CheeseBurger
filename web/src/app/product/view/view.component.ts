@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable, Subject, combineLatest } from 'rxjs';
 import { FirebaseService } from 'src/app/service/firebase.service';
+import { ProductService } from 'src/app/service/product.service';
 
 @Component({
   selector: 'app-view',
@@ -15,6 +16,7 @@ export class ViewComponent implements OnInit {
 
   constructor(
     private firebaseService: FirebaseService,
+    public bn: ProductService,
     private afs: AngularFirestore
   ) { }
 

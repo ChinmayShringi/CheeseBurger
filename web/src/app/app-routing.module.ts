@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './auth.guard';
+import { AuthgaurdGuard } from './authgaurd.guard';
 import { CartComponent } from './cart/cart.component';
 import { ChatComponent } from './chat/chat.component';
 import { HomeComponent } from './home/home.component';
@@ -21,10 +22,10 @@ const routes: Routes = [
   { path: 'login',component: LoginComponent },
   { path: 'reg/:id',component: ProdPicComponent },
   { path: 'vprod',component: ViewComponent },
-  { path: 'cprod',component: CreateComponent },
+  { path: 'cprod',component: CreateComponent ,canActivate: [AuthGuard]},
   { path: 'uprod',component: EditComponent },
   { path: 'cart',component: CartComponent },
-  { path: 'chat',component: ChatComponent },
+  { path: 'chat',component: ChatComponent ,canActivate: [AuthGuard]},
   { path: 'notifi',component: NotificationComponent },
   { path: 'prodProf',component: ProdPageComponent },
 ];

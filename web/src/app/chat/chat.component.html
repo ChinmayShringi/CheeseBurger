@@ -1,0 +1,26 @@
+    <div class="chat-container" style="height: 75vh;">
+      <header class="chat-header">
+        <h3> Support Chat</h3>
+        <a routerLink="/home" class="btn btn-danger p-2 m-2">Leave Room</a>
+      </header>
+      <main class="chat-main p-2 ml-3">
+        <div class="chat-messages card" style="height:50vh;width: 60vw;">
+                      <div class="message">
+                          Hi
+                      </div>
+        </div>
+      </main>
+      <div class="chat-form-container">
+        <form id="chat-form">
+          <input
+          class="m-2 p-2"
+            id="msg"
+            type="text"
+            placeholder="Enter Message"
+            required
+            autocomplete="off"
+          />
+          <button class="btn btn-success m-2 p-2">Send</button>
+        </form>
+      </div>
+    </div>

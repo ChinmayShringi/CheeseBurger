@@ -4,8 +4,8 @@
   </nav>
 </div>
 <div class="list-group users-list">
-	<div *ngIf="!items">
-		no data
+	<div *ngIf="!items" class="mx-auto">
+		No data
 	</div>
 		<div class="album py-5">
 			<div class="container">
@@ -13,12 +13,12 @@
 				<div *ngFor="let item of data" >
 				<div class="col-md-12">
 				  <div class="card mb-4 shadow-sm">
-					<img src="../../assets/display.jpg" height="225" alt="">
+					<img style="object-fit: cover;" src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" height="225" alt="">
 					<div class="card-body">
 					  <p class="card-text">{{item.name}} {{item.price}} {{item.quantity}}</p>
 					  <div class="d-flex justify-content-between align-items-center">
 						<div class="btn-group">
-						  <button type="button" class="btn btn-sm btn-outline-secondary">Buy now</button>
+						  <button type="button" (click)="bn.buyNow(item)" class="btn btn-sm btn-outline-secondary">Buy now</button>
 						</div>
 						<small class="text-muted">9 mins</small>
 					  </div>
