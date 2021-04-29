@@ -4,7 +4,7 @@ A website can be used as a template, was made to provide a platform where people
 
 Firebase Angular Flutter CURD  template
 
-# WEB ScreenShots
+# Web ScreenShots
 ## Home
 ![Home SS](web/ss/home.png "Home")
 
